@@ -1,0 +1,56 @@
+{
+  "name": "wws",
+  "version": "0.0.1",
+  "description": "Web WebSocket!",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --verbose --runInBand",
+    "test-cov": "jest --verbose --runInBand --coverage"
+  },
+  "keywords": [
+    "web",
+    "protocol",
+    "websocket",
+    "api",
+    "rest",
+    "lib",
+    "library"
+  ],
+  "homepage": "https://github.com/olehxch/wws",
+  "author": "Oleh Chaplia",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/olehxch/wws"
+  },
+  "license": "None",
+  "devDependencies": {
+    "jest": "^29.5.0"
+  },
+  "dependencies": {
+    "socket.io": "^4.7.5"
+  },
+  "jest": {
+    "verbose": true,
+    "testEnvironment": "node",
+    "collectCoverage": false,
+    "collectCoverageFrom": [
+      "lib/**/*.js"
+    ],
+    "coverageDirectory": ".coverage",
+    "coverageReporters": [
+      "lcov"
+    ],
+    "globals": {
+      "NODE_ENV": "test",
+      "JEST_USE_BASENAME_FOR_CACHING": false
+    },
+    "modulePathIgnorePatterns": [
+      "node_modules/"
+    ],
+    "roots": [
+      "<rootDir>/lib/",
+      "<rootDir>/examples/"
+    ],
+    "cacheDirectory": "<rootDir>/.jestcache"
+  }
+}
